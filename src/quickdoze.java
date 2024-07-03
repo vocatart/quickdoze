@@ -1,4 +1,4 @@
-public class quickdoze {
+public class QuickDoze {
     public static void main(String[] args) throws Exception {
         /*
          * utau passes the following 13 arguments in order:
