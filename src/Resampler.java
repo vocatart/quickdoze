@@ -7,6 +7,7 @@ public class Resampler {
      * @param targetNote       note to resample to
      * @param diphoneVelocity  consonant velocity
      * @param flagArray        string array of given flags
+     * @param offset           length of note
      * @param stationaryLength length of the engine-stretched portion
      * @param diphoneLength    length of the engine-preserved portion
      * @param cutoff           render offset from start of audio
@@ -16,7 +17,8 @@ public class Resampler {
      * @param pitchObject
      */
     public static void resample(String inputFile, String outputFile, int targetNote, float diphoneVelocity,
-            String[] flagArray, int stationaryLength, float diphoneLength, float cutoff, float volume, float modulation,
+            String[] flagArray, int offset, int stationaryLength, float diphoneLength, float cutoff, float volume,
+            float modulation,
             float tempo, String pitchObject) {
         // resample
     }
