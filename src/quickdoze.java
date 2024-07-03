@@ -47,6 +47,13 @@ public class quickdoze {
         }
     };
 
+    /**
+     * Checks to see if the input note name contains a negative octave.
+     * 
+     * @param noteName input note
+     * @return <code>true</code> if the octave is negative, <code>false</code> if
+     *         not.
+     */
     private static boolean checkOctave(String noteName) {
         if (noteName.contains("-")) {
             return true;
@@ -55,6 +62,13 @@ public class quickdoze {
         }
     }
 
+    /**
+     * Parses note name into string array containing note and octave.
+     * 
+     * @param noteName input note
+     * @return String array with index <code>0</code> being the note, and
+     *         <code>1</code> being the octave.
+     */
     private static String[] parseNoteName(String noteName) {
         StringBuilder note = new StringBuilder();
         StringBuilder octave = new StringBuilder();
@@ -75,6 +89,12 @@ public class quickdoze {
         };
     }
 
+    /**
+     * Converts given note name (sharp-style) into MIDI note.
+     * 
+     * @param noteName input note
+     * @return MIDI note number (C4 = 60)
+     */
     public static int getTargetNote(String noteName) {
         String[] noteInfo = parseNoteName(noteName);
 
