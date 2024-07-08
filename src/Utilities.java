@@ -49,10 +49,10 @@ public class Utilities {
         StringBuilder octave = new StringBuilder();
 
         for (char token : noteName.toCharArray()) {
-            if (Character.isDigit(token)) {
-                octave.append(token);
-            } else if (token == '-') {
+            if (token == '-') {
                 continue;
+            } else if (Character.isDigit(token)) {
+                octave.append(token);
             } else {
                 note.append(token);
             }
@@ -76,7 +76,7 @@ public class Utilities {
         int baseNote = BASE_MIDI_NOTES.get(noteInfo[0]);
         int noteOctave = Integer.valueOf(noteInfo[1]) + 1;
 
-        if (checkOctave(noteName) == true) {
+        if (checkOctave(noteName)) {
             return (noteOctave * 12 + baseNote) - 24;
         } else {
             return noteOctave * 12 + baseNote;
